@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purito Cover</title>
+    <link rel="stylesheet" href="css/purito_Cover.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    
+
+    <script>
+        window.onload = () => {
+
+           
+
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            let header = document.querySelector('.header');
+
+
+            window.addEventListener('wheel', (event) => {
+
+                let wheelScroll = event.deltaY
+                if (wheelScroll > 0) {
+
+                    header.classList.add('on')
+                } else {
+
+                    header.classList.remove('on')
+                }
+
+            });
+
+            let rotate = document.getElementsByClassName('rotate')[0]; //엘리먼트는 .찍지말자
+            let icon = document.getElementsByClassName('icon')[0];
+            let subWrap = document.querySelector('.sub_wrap')
+            let exe = document.querySelector('.exe')
+            let sideMenu01 = document.querySelector('.side_menu .menu01');
+            let sideMenu02 = document.querySelector('.side_menu .menu02');
+            let on01 = document.querySelector('.nav_3 .on01');
+            let on02 = document.querySelector('.nav_3 .on02');
+            let page3_1_1 = document.querySelector('.image01 .text01');
+            let page3_1_2 = document.querySelector('.image01 .text02');
+            let page3_1_3 = document.querySelector('.image01 .text03');
+            let page3_1 = document.querySelector('.image_box .box1');
+            let page3_2 = document.querySelector('.image_box .box2');
+            let page3_3 = document.querySelector('.image_box .box3');
+            let page4_1 = document.querySelector('.image_box2 .con1');
+            let page4_2 = document.querySelector('.image_box2 .con2');
+            let page4_3 = document.querySelector('.image_box2 .con3');
+            let page4_1_1 = document.querySelector('.image02 .item01');
+            let page4_1_2 = document.querySelector('.image02 .item02');
+            let page4_1_3 = document.querySelector('.image02 .item03');
+            let span1 = document.querySelector('.text1 .span1');
+            let span2 = document.querySelector('.text2 .span2');
+            let span3 = document.querySelector('.text3 .span3');
+            let span4 = document.querySelector('.text4 .span4');
+            let span5 = document.querySelector('.text5 .span5');
+            let span6 = document.querySelector('.text6 .span6');
+            let page5_1 = document.querySelector('.image1');
+            let page5_2 = document.querySelector('.image2');
+            let page5_3 = document.querySelector('.image3');
+            let page5_4 = document.querySelector('.image4');
+            let page5_5 = document.querySelector('.image5');
+            let page5_6 = document.querySelector('.image6');
+            
+            
+
+
+            icon.addEventListener('click', () => {
+
+                rotate.src = 'img/헤더 위방향.png'
+
+            });
+            icon.addEventListener('click', () => {
+
+                subWrap.style.display = 'block'
+                subWrap.style.display = 'flex'
+
+            });
+            exe.addEventListener('click', () => {
+
+                subWrap.style.display = 'none'
+
+
+            });
+            on01.addEventListener('mouseover', () => {
+
+                sideMenu01.style.display = 'block'
+                on01.style.height = '150px'
+
+
+            });
+            on01.addEventListener('mouseout', () => {
+
+                sideMenu01.style.display = 'none'
+
+
+            });
+            on02.addEventListener('mouseover', () => {
+
+                sideMenu02.style.display = 'block'
+
+
+            });
+            on02.addEventListener('mouseout', () => {
+
+                sideMenu02.style.display = 'none'
+
+
+            });
+            page3_1_1.addEventListener('mouseover', () => {
+
+                page3_1.style.display = 'block'
+                page4_1.style.display = 'block'
+                page4_1_1.style.display = 'block'
+
+
+
+
+            });
+            page3_1_1.addEventListener('mouseout', () => {
+
+                page3_1.style.display = 'none'
+                page4_1.style.display = 'none'
+                page4_1_1.style.display = 'none'
+
+
+
+            });
+            page3_1_2.addEventListener('mouseover', () => {
+
+                page3_2.style.display = 'block'
+                page4_2.style.display = 'block'
+                page4_1_2.style.display = 'block'
+
+
+
+            });
+            page3_1_2.addEventListener('mouseout', () => {
+
+                page3_2.style.display = 'none'
+                page4_2.style.display = 'none'
+                page4_1_2.style.display = 'none'
+
+
+
+            });
+            page3_1_3.addEventListener('mouseover', () => {
+
+                page3_3.style.display = 'block'
+                page4_3.style.display = 'block'
+                page4_1_3.style.display = 'block'
+
+
+            });
+
+            page3_1_2.addEventListener('mouseout', () => {
+
+                page3_3.style.display = 'none'
+                page4_3.style.display = 'none'
+                page4_1_3.style.display = 'none'
+
+
+
+            });
+
+            span1.addEventListener('click', () => {
+
+                page5_2.style.display = 'block'
+                page5_1.style.display = 'none'
+                page5_3.style.display = 'none'
+                page5_4.style.display = 'none'
+                page5_5.style.display = 'none'
+                page5_6.style.display = 'none'
+                
+                
+                
+
+            });
+            span2.addEventListener('click', () => {
+
+                page5_3.style.display = 'block'
+                page5_2.style.display = 'none'
+                page5_1.style.display = 'none'
+                
+                page5_4.style.display = 'none'
+                page5_5.style.display = 'none'
+                page5_6.style.display = 'none'
+
+
+            });
+            span3.addEventListener('click', () => {
+
+                page5_4.style.display = 'block'
+                page5_2.style.display = 'none'
+                page5_1.style.display = 'none'
+                page5_3.style.display = 'none'
+                
+                page5_5.style.display = 'none'
+                page5_6.style.display = 'none'
+
+            });
+            span4.addEventListener('click', () => {
+
+                page5_5.style.display = 'block'
+                page5_2.style.display = 'none'
+                page5_1.style.display = 'none'
+                page5_3.style.display = 'none'
+                page5_4.style.display = 'none'
+                
+                page5_6.style.display = 'none'
+
+            });
+            span5.addEventListener('click', () => {
+
+
+                page5_6.style.display = 'block'
+                page5_2.style.display = 'none'
+                page5_1.style.display = 'none'
+                page5_3.style.display = 'none'
+                page5_4.style.display = 'none'
+                page5_5.style.display = 'none'
+                
+
+
+            });
+            span6.addEventListener('click', () => {
+
+
+                page5_6.style.display = 'none'
+                page5_2.style.display = 'none'
+                page5_1.style.display = 'block'
+                page5_3.style.display = 'none'
+                page5_4.style.display = 'none'
+                page5_5.style.display = 'none'
+                
+
+
+            });
+
+
+
+
+            AOS.init();
+        }; //script end
+    </script>
+
+
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="side_menu">
+            <div class="menu01">
+                <ul>
+                    <li>Great Me</li>
+                    <li>News & Press</li>
+                </ul>
+            </div>
+            <div class="menu02">
+                <ul>
+                    <li>Contack Us</li>
+                    <li>FAQ</li>
+                    <li>Stores</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="inner">
+
+            <nav class="nav_1">
+
+                <span class="icon">Product <img class="rotate" src="img/헤더 아랫방향.png" alt="아이콘"></span>
+                <span>Ingredients</span>
+                <span>Brand Story</span>
+
+            </nav> <!-- nav_1 end -->
+            <nav class="nav_2">
+                <h5>Purito</h5>
+                <p>SEOUL</p>
+            </nav> <!-- nav_2 end -->
+            <nav class="nav_3">
+
+                <span class="icon on01">Community <img src="img/헤더 아랫방향.png" alt="아이콘"></span>
+                <span class="icon on02">Help <img src="img/헤더 아랫방향.png" alt="아이콘"></span>
+                <span><img src="img/헤더 돋보기.png" alt="아이콘"></span>
+                <span><img src="img/헤더 지구.png" alt="아이콘"></span>
+
+            </nav> <!-- nav_3 end -->
+        </div><!-- inner end -->
+        <div class="sub_wrap">
+            <div class="sub">
+                <strong>제품</strong>
+                <ul>
+                    <li>전 제품 보기</li>
+                    <li>베스트셀러</li>
+                    <li>신상품</li>
+                </ul>
+            </div> <!-- sun end -->
+            <div class="sub">
+                <strong>유형별</strong>
+                <ul>
+                    <li>클렌저</li>
+                    <li>토너 & 에센스</li>
+                    <li>세럼</li>
+                    <li>모이스처라이저</li>
+                    <li>선 케어</li>
+                    <li>메이크업</li>
+                    <li>스페셜 케어</li>
+                </ul>
+            </div> <!-- sun end -->
+            <div class="sub">
+                <strong>피부 고민 별</strong>
+                <ul>
+                    <li>홍조 및 민감성</li>
+                    <li>약해진 피부 장벽</li>
+                    <li>건조함</li>
+                    <li>트러블 & 여드름</li>
+                    <li>주름 & 처진 라인</li>
+                    <li>칙칙함</li>
+                </ul>
+            </div> <!-- sun end -->
+            <div class="sub">
+                <strong>원료 별</strong>
+                <ul>
+                    <li>센텔라 아시아티카</li>
+                    <li>해양심층수</li>
+                    <li>수국</li>
+                </ul>
+            </div> <!-- sub end -->
+
+            <figure class="header_image">
+                <img src="img/섭 화장품.jpg" alt="이미지">
+                <h4>10-Second Rapid <br> Soothing
+                </h4>
+
+                <span>Shop Now</span>
+            </figure>
+
+
+            <figure class="exe">
+                <img src="img/엑스.png" alt="이미지">
+            </figure>
+
+        </div> <!-- sub_wrap end -->
+
+
+        </div>
+    </header> <!-- header end -->
+
+    <section class="main_visure">
+        <figure>
+            <iframe
+                src="https://player.vimeo.com/video/912506867?quality=1080p&muted=1&autoplay=1&autopause=0&loop=1&background=1"
+                frameborder="0"></iframe>
+        </figure>
+    </section>
+
+    <section class="section01">
+        <h3>Discover our ( Best ) Sellers</h3>
+
+        <div class="item_wrap">
+            <div class="image"><img src="img/2page_main.jpg" alt="이미지"></div>
+            <div class="text">
+                <ul>
+                    <li>피부 진정의 최애템</li>
+                    <li>원더 릴리프 센텔라 세럼 언센티드</li>
+                    <li>민감한 피부를 즉시 진정시킬 단 하나의 구원자를 경험해 보세요!</li>
+                    <li>( Shop Now <span><img src="img/2page_오른쪽.png" alt="이미지"></span> )</li>
+                </ul>
+            </div>
+        </div><!-- item_wrap end -->
+    </section><!-- section01 -->
+
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/slied-1.png" alt="이미지">
+                <div class="text">
+                    <strong>원더 릴리프 센텔라
+                        아이크림</strong>
+                    <p>19,000원</p>
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="img/slied-2.png" alt="이미지">
+                <div class="text">
+                    <strong>원더 릴리프 센텔라
+                        아이크림</strong>
+                    <p>19,000원</p>
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="img/slied-3.png" alt="이미지">
+                <div class="text">
+                    <strong>원더 릴리프 센텔라
+                        세럼</strong>
+                    <p>28,000원</p>
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="img/slied-4.png" alt="이미지">
+                <div class="text">
+                    <strong>원더 릴리프 센텔라
+                        크림</strong>
+                    <p>25,000원</p>
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="img/slied-5.png" alt="이미지">
+                <div class="text">
+                    <strong>원더 릴리프 센텔라
+                        토너 언센티드</strong>
+                    <p>28,000원</p>
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="img/slied-6.png" alt="이미지">
+                <div class="text">
+                    <strong>원더 릴리프 센텔라
+                        아이크림 언센티드</strong>
+                    <p>19,000원</p>
+                </div>
+            </div>
+            <div class="swiper-slide"><img src="img/slied-7.png" alt="이미지">
+                <div class="text">
+                    <strong>원더 릴리프 센텔라
+                        토너</strong>
+                    <p>28,000원</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <section class="section02">
+        <div class="text_wrap">
+            <ul>
+                <li>대한민국에서 <br>
+                    가장 좋은 <span>천연 원료</span>를 찾기 위한</li>
+                <li class="color">퓨리토의 <span>탐험</span>과 <span>열정</span>은 계속 됩니다.</li>
+            </ul>
+        </div>
+
+        <div class="image_wrap">
+            <div class="image01">
+                <div class="image_box">
+                    <img class="box1" src="img/3page1-1.jpg" alt="이미지">
+                    <img class="box2" src="img/3page1-2.jpg" alt="이미지">
+                    <img class="box3" src="img/3page1-3.jpg" alt="이미지">
+                </div>
+                <div class="text text01 ">
+
+
+                    <span>강력한 진정</span>
+                    <h5>한국의 센텔라 아시아티카</h5>
+
+                </div>
+                <div class="text text02">
+
+                    <span>풍부한 수분</span>
+                    <h5>해양심층수</h5>
+
+                </div>
+                <div class="text text03">
+
+
+                    <span>시간초월 웰-에이징</span>
+                    <h5>제주 수국</h5>
+
+                </div>
+            </div> <!-- image01 end -->
+            <div class="image02">
+                <div class="image_box2">
+                    <img class="con1" src="img/3page2-1 .jpg" alt="이미지">
+                    <img class="con2" src="img/3page2-2.jpg" alt="이미지">
+                    <img class="con3" src="img/3page-2-3.jpg" alt="이미지">
+                </div>
+                <div class="item item01">
+
+                    <strong>한국의 다양한 지형에서 자란 센텔라는 놀라운 진정 효과로 유명합니다.</strong>
+                </div>
+                <div class="item item02">
+
+                    <strong>한국 동해의 깊은 바다에서 채취한 해양심층수는 우리 피부에 충분한 미네랄을 공급합니다.</strong>
+                </div>
+                <div class="item item03">
+
+                    <strong>제주 수국의 풍부한 영양감이 피부 탄력과 주름감소를 도와줍니다.</strong>
+                </div>
+            </div>
+
+
+    </section>
+
+    <section class="section03">
+        <h2>( 더 많은 연료를 만나보세요 <span><img src="img/2page_오른쪽.png" alt=""></span>)</h2>
+
+        <div class="image">
+            <div class="logo">
+                <strong>New Arrivals</strong>
+            </div>
+            <div class="text">
+                <ul>
+                    <li>촉촉한 피부로 수분 폭탄 듀오</li>
+                    <li>피부 속까지 필요한 수분 공급을 촉촉하게 만드는 동해 해양심층수 라인</li>
+                    <li>(Dive On In <span><img src="img/2page_오른쪽.png" alt=""></span> )</li>
+                </ul>
+            </div>
+
+        </div><!-- image end -->
+    </section> <!-- section03 end -->
+
+    <section class="section04">
+        <h1>Rooted in Wonder.</h1>
+
+        <div class="image_wrap">
+            <div class="image01">
+                <img src="img/5page-1.jpg" alt="이미지">
+            </div>
+            <div class="image02">
+
+                <div class="text">
+                    <h5>Sensorial <br> Skincare</h5>
+                    <span>세심하게 제작된 우리의 스킨케어 제품은 뛰어난 결과 뿐만 <br> 아니라 즐거운 감각적 경험도 전달합니다.</span>
+                </div>
+            </div>
+
+        </div> <!-- image_wrap end -->
+    </section> <!-- section04 end -->
+
+    <section class="section05">
+
+        <div class="image1" >
+            <div class="text1">
+                <h1>Touch Your ( <span class="span1">Seoul</span> )</h1>
+                <strong>퓨리토 서울! 그 Inspiration의 시작</strong>
+            </div><!-- text end -->
+        </div> <!-- image end -->
+        <div class="image2">
+            <div class="text2">
+                <h1>Touch Your ( <span class="span2">Urbanity</span> )</h1>
+                <strong>N Seoul Tower N서울타워</strong>
+            </div><!-- text end -->
+        </div> <!-- image end -->
+        <div class="image3">
+            <div class="text3">
+                <h1>Touch Your ( <span class="span3">Nature</span> )</h1>
+                <strong>Seoul Forest Park 성수 서울숲</strong>
+            </div><!-- text end -->
+        </div> <!-- image end -->
+        <div class="image4">
+            <div class="text4">
+                <h1>Touch Your ( <span class="span4">  Life  </span> )</h1>
+                <strong>Yeouido Hangang Park 여의도 한강 공원</strong>
+            </div><!-- text end -->
+        </div> <!-- image end -->
+        <div class="image5">
+            <div class="text5">
+                <h1>Touch Your ( <span class="span5">Seoul</span> )</h1>
+                <strong>퓨리토 서울! 그 Inspiration의 시작</strong>
+            </div><!-- text end -->
+        </div> <!-- image end -->
+        <div class="image6">
+            <div class="text6">
+                <ul>
+                    <li>Touch ( <span class="span6">Seoul</span> )</li>
+                    <li>우리는 자연과 도시가 조화를 이루는 <br>
+                    서울의 풍부한 문화와 <br>
+                무한한 창의성을 참험합니다</li>
+                    <li>( Learn More <p><img src="img/2page_오른쪽.png" alt="이미지"></p> )</li>
+                </ul>
+            </div><!-- text end -->
+        </div> <!-- image end -->
+    </section> <!-- section05 end -->
+
+
+    <section class="section06">
+        <h2>Follow <h2>
+            our Seoul-full feed</h1>
+
+            <div class="item_wrap">
+                <figure><img src="img/7page1-1.jpg" alt="이미지"></figure>
+                <figure><img src="img/7page1-2.jpg" alt="이미지"></figure>
+                <figure><img src="img/7page1-3.jpg" alt="이미지"></figure>
+                
+            </div> <!-- item wrap end -->
+
+            <div class="item_wrap2">
+                <div class="text"><h6>follow us @purito_official</h6></div>
+                <div class="image">
+                    <img src="img/7page2-1.jpg" alt="이미지">
+                </div>
+                <div class="image">
+                    <img src="img/7page2-2.jpg" alt="이미지">
+                </div>
+            </div> <!-- item_wrap2 end -->
+    </section> <!-- section06 end -->
+
+    <section class="section07">
+        <div class="footer01">
+            <h6>퓨리토 서울은 한국의 원료와 문화에서 <br>
+                영감을 받아 즐거운 감각적 경험을 만드는 <br>
+                한국의 컨템포러리 스킨케어 브랜드입니다.</h6>
+        </div>
+        <div class="footer02"></div>
+    </section> <!-- section07 end -->
+</body>
+
+</html>
